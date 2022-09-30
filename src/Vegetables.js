@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import './App.css'
+import Navbar from "./Navbar";
 
 
 const Vegetables =() =>{
@@ -23,6 +25,7 @@ const Vegetables =() =>{
   }
       return (
          <div>
+          <Navbar/>
           <h2>Welcome to GreensKiosk</h2>
           <p id="unique">We have fruits and vegetables</p>
           <div className="container">

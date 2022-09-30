@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react";
+import './App.css'
+import Navbar from "./Navbar";
 
 
-const Products =() =>{
+
+const Products =({name}) =>{
     const [product, setProduct] = useState()
     const [loading , setLoading] = useState(false);
+  
     useEffect(() => {   
         products()  
     },[])  
@@ -22,12 +26,15 @@ const Products =() =>{
     return <div>Loading.........</div>
   }
       return (
-         <div>
+        <div>
+        <Navbar/>
+
+          <p>Welcome {name} to GreensKiosk</p>
           <h2>Welcome to GreensKiosk</h2>
           <p id="unique">We have fruits and vegetables</p>
           <div className="container">
           <h3>All Products</h3>
-          <div className="fruits">
+          <div className="products">
             {product.map(item =>(
           <div key={item.id}>
               <p> {item.name}</p> 
